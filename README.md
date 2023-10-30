@@ -1,6 +1,6 @@
 ﻿# [ Practice Module ] Project Submission 
 
-IRS-PM-2023-10-31-IS02PT-CommunityHelpSG.zip
+IRS-PM-2023-10-31-IS01PT-CommunityHelpSG.zip
 
 
 
@@ -165,7 +165,7 @@ Verify the deployment by navigating to [http://127.0.0.1:8000](http://127.0.0.1:
 
 ## Roadmap
 
-See the [open issues](https://github.com/sivakrishnathota5/CommunityHelp/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/sivakrishnathota5/IRS-PM-2023-10-31-IS01PT-CommunityHelpSG-AbuseDetection/issues) for a list of proposed features (and known issues).
 
 
 
@@ -217,6 +217,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 **Lecturer: [GU Zhan (Sam)](https://www.iss.nus.edu.sg/about-us/staff/detail/201/GU%20Zhan "GU Zhan (Sam)")**
 
-[![alt text](https://www.iss.nus.edu.sg/images/default-source/About-Us/7.6.1-teaching-staff/sam-website.tmb-.png "Let's check Sam' profile page")](https://www.iss.nus.edu.sg/about-us/staff/detail/201/GU%20Zhan)
+[![alt text](https://www.iss.nus.edu.sg/images/default-source/About-Us/7.6.1-teaching-staff/sam-website.tmb-.png?Status=Master&sfvrsn=5039c05f_2)
 
 **zhan.gu@nus.edu.sg**
