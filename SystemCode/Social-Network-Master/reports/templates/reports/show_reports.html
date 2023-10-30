@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load boards_tags %}
+{% load humanize %}
+{% block title %}<title>Reports | Singapore Community Help</title>{% endblock %}
+
+{% block content %}
+
+{% include "includes/page_heading.html" with text="Reports" %}
+<p class="text-muted text-center">
+  Keep your board safe and fun.<br/>
+  Delete / Ban unwanted Subjects & Comments / Authors & Commenters from the board.
+</p>
+
+{% for report in reports %}
+<div class="card mb-2" style="border:none; border-bottom:1px solid #dcd7d7;">
+  <div class="card-body p-4">
+    {% if report.subject %}
+      <h6>
+        <a href="{{ report.subject.get_absolute_url }}">{{report}}</a>
+      </h6>
+      <br>
+      <a href="{% url 'deactivate_subject' report.subject.slug %}" class="btn btn-outline-primary btn-sm">Delete</a>
+      <a href="{% url 'ban_user' report.subject.board.slug report.subject.author.id %}" class="btn btn-outline-danger btn-sm">Ban Author</a>
+    {% else %}
+      <h6>
+        <a href="{{ report.comment.subject.get_absolute_url }}">{{report}}</a>
+      </h6>
+      <br>
+      <a href="{% url 'deactivate_comment' report.comment.id %}" class="btn btn-outline-primary btn-sm">Delete</a>
+      <a href="{% url 'ban_user' report.comment.subject.board.slug report.comment.commenter.id %}" class="btn btn-outline-danger btn-sm">Ban Commenter</a>
+    {% endif %}
+    <div style="float:right;">
+      <p class="text-muted">
+        Reported <span>{{report.created|naturaltime}}</span> by <a href="{% url 'user_profile' report.reporter.username %}">{{report.reporter.profile.screen_name}}</a>
+      </p>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}

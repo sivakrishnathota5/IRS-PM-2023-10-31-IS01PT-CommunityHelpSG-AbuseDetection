@@ -1,0 +1,43 @@
+<style>
+    #boards_container1 {
+      text-align: center;
+      line-height: 50px;
+      background-color:white; box-shadow:0 0 2px 1px #e6e1e2; padding:30px; margin-top:15px;
+    }
+    #boards_container1 a{
+    border-radius: 100px;
+    padding: 4px 15px;
+    margin: 5px;
+    border: 1px solid #d6d6d6;
+    text-decoration: none;
+    }
+    #boards_container1 a:hover{
+    border: 1px solid #3f51b5;
+    }
+</style>
+<div class="container" id="boards_container1">
+  <h3 class="text-muted">Active Threads By Category</h3>
+  {% for thread in threads %}
+    <a href="{{ board.get_absolute_url }}">{{ thread.title }}</a>
+  <div class="card-header text-center font-weight-bold" style="color:#283747; border-bottom: 2px solid #C0392B; display: inline-block; font-size: 12px; font-weight: 900; letter-spacing: -.1px;  padding-bottom: 0; text-transform: uppercase;">
+     IN [ {{thread.category}} ]  [ {{thread.Sentment}} ]
+  </div>
+  </br>
+  {% empty %}
+    <h5>  You have not <b>subscribed</b> any boards yet.</h5>
+  {% endfor %}
+ 
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#boards_container1").hide();
+  
+  $("#boards_container_trigger1").click(function(){
+    $("#boards_container1").slideToggle("slow", function() {
+      // Animation complete.
+    });
+  });
+  
+});
+</script>

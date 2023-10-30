@@ -1,0 +1,23 @@
+{% if threads %}
+<br>
+<div class="card border-light">
+  
+  <div class="card-header text-center font-weight-bold" style="color:#FF0000; display: inline-block; font-size: 16px; font-weight: 900; letter-spacing: -.4px; margin: 3px 0; padding-bottom: 0; text-transform: uppercase;">
+     Active Threads  By Category
+  </div>
+  <ul class="list-group list-group-flush">
+    {% for thread in threads %}
+    
+      <div class="card-header text-center font-weight-bold" style="color:#283747; border-bottom: 2px solid #C0392B; display: inline-block; font-size: 12px; font-weight: 900; letter-spacing: -.4px; margin: 3px 0; padding-bottom: 0; text-transform: uppercase;">
+        IN [ {{thread.category}} ] [ {{thread.Sentment}} ]
+      </div>
+      
+   <div class="card-header text-center font-weight-bold" style="color:#D35400;  display: inline-block; font-size: 14px; font-weight: 900; letter-spacing: -.4px; margin: 3px 0; padding-bottom: 0; text-transform: uppercase;">
+    <li class="list-group-item" style="font-size:14px;color:#D35400;"><a href="{{thread.get_absolute_url}}" class="card-link">{{thread.title}} </a> 
+    </div>
+  
+     </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
