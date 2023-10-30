@@ -12,7 +12,7 @@ IRS-PM-2023-10-31-IS02PT-CommunityHelpSG.zip
 ## Singapore Community Help , 
 ### Social Network
 
-<img src="SystemCode/clips/static/hdb-bto.png"
+<img src="https://github.com/sivakrishnathota5/IRS-PM-2023-10-31-IS01PT-CommunityHelpSG-AbuseDetection/blob/main/Miscellaneous/HELPWEBPAGE.png"
      style="float: left; margin-right: 0px;" />
 
 ---
